@@ -3,7 +3,8 @@
     <h1>Hello {{ name }}</h1>
     <input type="submit" @click="changeName()" value="Smoke Trees"/>
     <input type="text" v-model="name">
-    <ChildShaq :parentName="name"/>
+    <ChildShaq :parentName="name" @clicked = "onClickChild"/>
+    <h2>{{childName}}</h2>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ export default {
   data() {
     return {
       name: 'BigShaq',
+      childName: '',
     };
   },
   watch: {},
@@ -25,6 +27,9 @@ export default {
     },
     changeValue(event) {
       this.name = event.target.value;
+    },
+    onClickChild(value) {
+      this.childName = value;
     },
   },
   //this is when the element have mounted
