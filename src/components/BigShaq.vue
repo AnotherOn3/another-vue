@@ -3,6 +3,7 @@
     <h1>Hello {{ name }}</h1>
     <input type="submit" @click="changeName()" value="Smoke Trees"/>
     <input type="text" v-model="name">
+    <ChildShaq :parentName="name"/>
   </div>
 </template>
 
