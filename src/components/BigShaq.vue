@@ -4,7 +4,7 @@
     <input type="submit" @click="changeName()" value="Smoke Trees"/>
     <input type="text" v-model="name">
     <ChildShaq :parentName="name" @clicked = "onClickChild"/>
-    <h2>{{childName}}</h2>
+    <h2>My child name is {{childName}}</h2>
   </div>
 </template>
 
